@@ -21,6 +21,33 @@ public class Demo {
         aComputer.configure();
         Laptop aLaptop = new Laptop("AMD", "16", "6",16);
         aLaptop.configure();
+        //
+        //
+        Car bSportCar = new SportCar("Subaru");
         
+        bSportCar.turnOnEngine();
+       // bSportCar.boostSpeed();  this is not possible
+        System.out.println(bSportCar.getModel());
+        //
+        //
+        Car cSportCar = new UltraSportCar("Peugeot", "Nitro-123");
+        // cSportCar.getNitrogenType(); this is not possible
+        System.out.println("====================== POLYMORPHISM ===================");
+        igniteEngine(bSportCar);
+        igniteEngine(cSportCar);
+        System.out.println("====================== NO-POLYMORPHISM ===================");
+        UltraSportCar cSportCar2 = new UltraSportCar("Peugeot", "Nitro-123");
+        SportCar bSportCar2 = new SportCar("Subaru");
+        igniteEngine(cSportCar2);
+        igniteEngine(bSportCar2);
     }
+    
+    // since SportCar and UltraSportCar are subclasses of Car, they can have both type at the same time
+    // for example: bSportCar2 is either of type Car or of type SportCar
+    // POLY-MORPHISM
+    
+    public static void igniteEngine(Car someCar) {
+        someCar.turnOnEngine();
+    }
+  
 }
