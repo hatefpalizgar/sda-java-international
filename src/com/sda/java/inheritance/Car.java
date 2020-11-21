@@ -15,5 +15,10 @@ public class Car {
         return model;
     }
     
-    
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                '}';
+    }
 }

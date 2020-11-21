@@ -1,6 +1,6 @@
 package com.sda.java.inheritance;
 
-public class UltraSportCar extends SportCar{
+public class UltraSportCar extends Car{
     // UltraSportCar is a SportCar as well
     // UltraSportCar is a Car as well. Car is grandparent of the UltraSportCar
     
@@ -13,5 +13,10 @@ public class UltraSportCar extends SportCar{
     
     public String getNitrogenType() {
         return nitrogenType;
+    }
+    
+    @Override
+    public void turnOnEngine() {
+        System.out.println("invoked turnOnEngine() --> UltraSportCar class");
     }
 }
