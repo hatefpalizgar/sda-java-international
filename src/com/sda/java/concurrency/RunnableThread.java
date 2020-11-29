@@ -10,6 +10,5 @@ public class RunnableThread implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }

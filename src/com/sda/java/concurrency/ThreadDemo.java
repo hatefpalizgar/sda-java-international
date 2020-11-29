@@ -22,6 +22,17 @@ public class ThreadDemo {
 
         Thread myRunnableThreadUsingThreadClass = new Thread(myRunnableThread);
         myRunnableThreadUsingThreadClass.start();
+
+
+        // using anonymous class to start a thread
+        new Thread( new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("running anonymous thread");
+            }
+        }).start();
+
+
     }
 }
 

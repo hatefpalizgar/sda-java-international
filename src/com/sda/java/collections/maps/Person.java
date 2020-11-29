@@ -33,4 +33,8 @@ public class Person implements Serializable {
                 ", age=" + age;
 
     }
+
+    public boolean isAdult() {
+        return age > 30;
+    }
 }
