@@ -1,4 +1,4 @@
-package com.sda.java.Streams;
+package com.sda.java.Streams.example.no2;
 
 import java.util.Arrays;
 import java.util.List;
